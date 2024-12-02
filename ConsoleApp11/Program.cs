@@ -12,8 +12,9 @@ namespace ConsoleApp11
         {
             int a = Input("a = ");
             int b = Input("b = ");
-            int z = Min(2 * a, b + a) + Min(2 * a - b, b);
-            Output(z);
+            int c = Input("c = ");;
+            double y = Function(a) + Function(b) + Function(c);
+            Output(y);
             Console.ReadKey();
         }
 
@@ -23,14 +24,14 @@ namespace ConsoleApp11
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        static int Min(int x, int y)
+        static double Function(int x)
         {
-            return (x < y) ? x : y;
+            return (Math.Sqrt(x) + x) / 3;
         }
         
-        static void Output(int result)
+        static void Output(double result)
         {
-            Console.WriteLine($"z = {result}");
+            Console.WriteLine($"y = {result}");
         }
     }
 }
