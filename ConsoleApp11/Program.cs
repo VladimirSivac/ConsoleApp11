@@ -10,9 +10,12 @@ namespace ConsoleApp11
     {
         static void Main(string[] args)
         {
-            int r = Input("Количество рублей: ");
-            int k = Input("Количество копеек: ");
-            Output(Kop(r, k));
+            int a = Input("a = ");
+            int b = Input("b = ");
+            int c = Input("c = ");
+            int min1 = Min(a, b);
+            int min2 = Min(min1, c);
+            Output(min2);
             Console.ReadKey();
         }
 
@@ -22,14 +25,14 @@ namespace ConsoleApp11
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        static int Kop(int r, int k)
+        static int Min(int x, int y)
         {
-            return r * 100 + k;
+            return (x < y) ? x : y;
         }
         
         static void Output(int result)
         {
-            Console.WriteLine($"Всего копеек: {result}");
+            Console.WriteLine($"Наименьшее число: {result}");
         }
     }
 }
