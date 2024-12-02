@@ -12,10 +12,8 @@ namespace ConsoleApp11
         {
             int a = Input("a = ");
             int b = Input("b = ");
-            int c = Input("c = ");
-            int min1 = Min(a, b);
-            int min2 = Min(min1, c);
-            Output(min2);
+            int z = Min(2 * a, b + a) + Min(2 * a - b, b);
+            Output(z);
             Console.ReadKey();
         }
 
@@ -32,7 +30,7 @@ namespace ConsoleApp11
         
         static void Output(int result)
         {
-            Console.WriteLine($"Наименьшее число: {result}");
+            Console.WriteLine($"z = {result}");
         }
     }
 }
