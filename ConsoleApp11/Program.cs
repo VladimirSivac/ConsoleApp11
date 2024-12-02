@@ -10,10 +10,13 @@ namespace ConsoleApp11
     {
         static void Main(string[] args)
         {
-            int a = Input("a = ");
-            int b = Input("b = ");
-            int c = Input("c = ");;
-            double y = Function(a) + Function(b) + Function(c);
+            int a1 = Input("a1 = ");
+            int a2 = Input("a2 = ");
+            int b1 = Input("b1 = ");
+            int b2 = Input("b2 = ");
+            int c1 = Input("c1 = ");
+            int c2 = Input("c2 = ");
+            double y = Function(a1, a2) + Function(b1, b2) + Function(c1, c2);
             Output(y);
             Console.ReadKey();
         }
@@ -24,9 +27,9 @@ namespace ConsoleApp11
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        static double Function(int x)
+        static double Function(int x, int y)
         {
-            return (Math.Sqrt(x) + x) / 3;
+            return (x + Math.Sqrt(y)) / (y + Math.Sqrt(x));
         }
         
         static void Output(double result)
